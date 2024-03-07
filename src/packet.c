@@ -153,7 +153,7 @@ char *encode_value(const struct Field field, struct GenericValue *value)
       return (char*)&value->int16_value;
 
     case INT32:
-       value->int32_value = signed_dec_to_int16(value->double_value,
+       value->int32_value = signed_dec_to_int32(value->double_value,
                                                 fabs(field.range.min.double_value) +
                                                 fabs(field.range.max.double_value));
        return (char*)&value->int32_value;
